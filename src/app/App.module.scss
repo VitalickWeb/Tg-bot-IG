@@ -1,65 +1,33 @@
 .App {
-  background: linear-gradient(to bottom, #000012, #000022);
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
 
-  @keyframes twinkle {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.3;
-    }
-    100% {
-        opacity: 1;
-    }
-    50% {
-      opacity: 0.5;
-    }
-  }
-  .star {
-    width: 3px;
-    height: 3px;
-    background-color: white;
-    border-radius: 50%;
+  .stars, .twinkling {
     position: absolute;
-    animation: twinkle 3s linear infinite;
-
-    &::before, &::after {
-      content: "";
-      position: absolute;
-      width: 1px;
-      height: 4px;
-      background-color: rgba(255, 255, 255, 1);
-    }
-
-    &::before {
-      top: -1px;
-      left: 1px;
-    }
-
-    &::after {
-      top: -1px;
-      left: 1px;
-      transform: rotate(45deg);
-    }
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
   }
 
-  @for $i from 1 through 200 {
-    $top: random(100) + vw;
-    $left: random(100) + vw;
-    $size: random(3) + 1;
+  .stars {
+    background: #000012 url(https://i.postimg.cc/hhFD7Nkf/apps-47636-13819498107583324-fb06b53a-4974-4acb-85e6-f6f363f85ab6-edec48d0-ec35-4a1f-8bf5-c455987b4a.png) repeat top center;
+    z-index: 0;
+  }
 
-    .star-#{$i} {
-      width: #{$size}px;
-      height: #{$size}px;
-      background-color: white;
-      border-radius: 50%;
-      position: absolute;
-      top: #{$top};
-      left: #{$left};
-    }
+  .twinkling {
+    background-image: url(https://i.postimg.cc/CLpNr4PF/twinkling.png);
+    animation: 8s twinkle infinite;
+    animation-timing-function: linear;
+  }
+
+  @keyframes twinkle {
+    from {backrgound-position: 0}
+    to {background-position: -100px 0}
   }
 }
 

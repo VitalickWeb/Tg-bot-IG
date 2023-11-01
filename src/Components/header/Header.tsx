@@ -1,10 +1,14 @@
 import React from 'react';
+import st from './Header.module.scss'
+
 
 export const Header = () => {
     return (
-        <div>
-            TG-BOT
-        </div>
+        <>
+            <h1 className={st.mainTitle}>
+                Vek AI
+            </h1>
+        </>
     );
 };
 

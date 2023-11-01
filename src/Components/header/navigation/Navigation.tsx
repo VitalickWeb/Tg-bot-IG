@@ -1,10 +1,28 @@
 import React from 'react';
+import st from './Navigation.module.scss'
 
-export const Navigation = () => {
+type NavType = {
+    id: string
+    title: string
+}
+
+export type NavigationPropsType = {
+    navigation: NavType[]
+}
+
+export const Navigation = ({navigation}: NavigationPropsType) => {
+    let navRender = navigation.map(n => {
+        return (
+            <li key={n.id}>
+                <a href="src/components/header/navigation/Nav">{n.title}</a>
+            </li>
+        )
+    })
+
     return (
-        <div>
-
-        </div>
+        <ul className={st.blockNav}>
+            {navRender}
+        </ul>
     );
 };
 

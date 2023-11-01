@@ -1,1 +1,17 @@
 
+$font-family: 'Helvetica Neue', sans-serif; // Шрифт
+$font-weight: 600; // Насыщенность шрифта
+$font-size: 35px;
+
+$margin-ai: 8px;
+
+.mainTitle {
+  background: linear-gradient(rgb(87, 159, 191), #FFF);
+  -webkit-background-clip: text; /* Для поддержки веб-кит браузерами */
+  color: transparent;
+  display: inline-block;
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  margin: 0;
+}

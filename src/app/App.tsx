@@ -1,27 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Header} from '../Components/header/Header';
 import {Navigation} from '../Components/header/navigation/Navigation';
 import st from './App.module.scss'
+import {v1} from "uuid";
 
 export function App() {
 
-    const stars = [];
+    const [navigation, setNavigation] = useState([
+        {id: v1(), title: "main"},
+        {id: v1(), title: "bot-skills"},
+        {id: v1(), title: "contacts"},
+    ])
 
-    for (let i = 1; i <= 200; i++) {
-        stars.push(<div key={i} className={`${st.star} ${st['star-' + i]}`}></div>);
-    }
+    return (
+        <div className={st.App}>
+        <div className={st.stars}></div>
+            <div className={st.twinkling}>
 
+                <Header/>
+                <Navigation navigation={navigation}/>
 
-  return (
-    <div className={st.App}>
-        <div className={st.stars}>
-            {stars}
-          <Header />
-          <Navigation />
-
+            </div>
         </div>
-    </div>
-  );
+    );
 }
 
 
