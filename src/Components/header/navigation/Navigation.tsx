@@ -14,7 +14,7 @@ export const Navigation = ({navigation}: NavigationPropsType) => {
     let navRender = navigation.map(n => {
         return (
             <li key={n.id}>
-                <a href="src/components/header/navigation/Nav">{n.title}</a>
+                <a href="src/components/header/navigation/Navigation">{n.title}</a>
             </li>
         )
     })

@@ -17,8 +17,8 @@ export function App() {
         <div className={st.stars}></div>
             <div className={st.twinkling}>
 
-                <Header/>
-                <Navigation navigation={navigation}/>
+                <Header navigation={navigation}/>
+
 
             </div>
         </div>
