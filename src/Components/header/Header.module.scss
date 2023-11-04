@@ -1,10 +1,9 @@
 
-$font-family: Black Ops One; // Шрифт
+//$font-family: Black Ops One; // Шрифт
 $font-weight: 400; // Насыщенность шрифта
 $font-size: 35px;
 
 .blockHeader {
-  //background-color: rgba(0,0,0,.86);
   height: 80px;
   position: fixed;
   top: 0;
@@ -13,7 +12,6 @@ $font-size: 35px;
   justify-content: center;
   border-bottom: 1px solid rgba(87, 159, 191, 0.25);
   backface-visibility: hidden;
-  //z-index: 3;
 
   @keyframes moveGlint {
     0% {
@@ -42,15 +40,26 @@ $font-size: 35px;
     justify-content: space-between;
     align-items: center;
 
-    .mainTitle {
-      background: linear-gradient(rgb(87, 159, 191), #FFF);
-      -webkit-background-clip: text; /* Для поддержки веб-кит браузерами */
-      color: transparent;
-      display: inline-block;
-      font-family: $font-family;
-      font-weight: $font-weight;
-      font-size: $font-size;
-      margin: 0;
+    .boxImageHeader {
+      display: flex;
+      align-items: center;
+
+      .logoImage {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+        border-radius: 100%;
+      }
+      .mainTitle {
+        background: linear-gradient(rgb(87, 159, 191), #FFF);
+        -webkit-background-clip: text; /* Для поддержки веб-кит браузерами */
+        color: transparent;
+        display: inline-block;
+        font-family: 'Bebas Neue', sans-serif;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        margin: 0;
+      }
     }
   }
 }

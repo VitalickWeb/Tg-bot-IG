@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import {Header} from '../Components/header/Header';
-import {Navigation} from '../Components/header/navigation/Navigation';
 import st from './App.module.scss'
 import {v1} from "uuid";
+
+import logoBrainAiImage from '../assets/images/top-logo/pngtree—ring.png'
 
 export function App() {
 
@@ -17,7 +18,10 @@ export function App() {
         <div className={st.stars}></div>
             <div className={st.twinkling}>
 
-                <Header navigation={navigation}/>
+                <Header
+                    image={logoBrainAiImage}
+                    navigation={navigation}
+                />
 
 
             </div>

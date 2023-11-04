@@ -1,5 +1,6 @@
-$font-family: Black Ops One; // Шрифт
+//$font-family: Black Ops One; // Шрифт
 $font-size: 16px;
+$font-weight: 500;
 
 nav ul.blockNav {
   width: 338px;
@@ -12,8 +13,11 @@ nav ul.blockNav {
     -webkit-background-clip: text; /* Для поддержки веб-кит браузерами */
     color: transparent;
     display: block;
-    font-family: $font-family;
+    font-family: BlinkMacSystemFont, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     font-size: $font-size;
+    font-weight: $font-weight;
 
     text-decoration: none;
     text-transform: uppercase;
@@ -47,7 +51,7 @@ nav ul.blockNav {
   }
   a:active {
     transform: scale(0.95); /* Уменьшение размера на 5% при нажатии */
-    transition: transform 0.2s, color 0.2s; /* Плавная анимация при нажатии и смена цвета текста */
+    transition: transform 0.3s, color 0.3s; /* Плавная анимация при нажатии и смена цвета текста */
     color: #3a75b0;
   }
 

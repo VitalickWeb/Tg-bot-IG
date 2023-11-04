@@ -9,14 +9,19 @@ export type NavType = {
 }
 
 export type NavigationPropsType = {
+    image: string
     navigation: NavType[]
 }
 
-export const Header = ({navigation}: NavigationPropsType) => {
+export const Header = ({image, navigation}: NavigationPropsType) => {
     return (
         <div className={st.blockHeader}>
             <div className={st.containerHeader}>
-                <h1 className={st.mainTitle}>Vek AI</h1>
+                <div className={st.boxImageHeader}>
+                    <img src={image} className={st.logoImage} alt=""/>
+                    <h1 className={st.mainTitle}>Vek AI</h1>
+                </div>
+
                 <nav className={st.navContainer}>
                     <Navigation navigation={navigation}/>
                 </nav>
