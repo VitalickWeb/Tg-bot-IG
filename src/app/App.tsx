@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {Header} from '../Components/header/Header';
 import st from './App.module.scss'
 import {v1} from "uuid";
 
 import logoBrainAiImage from '../assets/images/top-logo/pngtree—ring.png'
+import {Header} from '../Components/header/Header';
+import {Main} from "../Components/main/Main";
 
 export function App() {
 
@@ -22,6 +23,7 @@ export function App() {
                     image={logoBrainAiImage}
                     navigation={navigation}
                 />
+                <Main />
 
 
             </div>
