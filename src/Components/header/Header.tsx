@@ -14,6 +14,7 @@ export type NavigationPropsType = {
 }
 
 export const Header = ({image, navigation}: NavigationPropsType) => {
+
     return (
         <div className={st.blockHeader}>
             <div className={st.containerHeader}>

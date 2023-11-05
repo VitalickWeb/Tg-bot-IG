@@ -13,15 +13,6 @@ $font-size: 35px;
   border-bottom: 1px solid rgba(87, 159, 191, 0.25);
   backface-visibility: hidden;
 
-  @keyframes moveGlint {
-    0% {
-      background-position: 150% 0;
-    }
-    100% {
-      background-position: -50% 0;
-    }
-  }
-
   &::before { /* Используйте & для обращения к родительскому селектору .blockHeader */
     content: "";
     position: absolute;
@@ -32,6 +23,14 @@ $font-size: 35px;
     background: linear-gradient(90deg, transparent, rgba(87, 159, 191, 0.46), transparent);
     background-size: 200% 100%;
     animation: moveGlint 4s linear infinite;
+  }
+  @keyframes moveGlint {
+    0% {
+      background-position: 150% 0;
+    }
+    100% {
+      background-position: -50% 0;
+    }
   }
 
   .containerHeader {
@@ -49,9 +48,21 @@ $font-size: 35px;
         height: 40px;
         margin-right: 5px;
         border-radius: 100%;
+        background-color: transparent; // Цвет фона
+        animation: rotateAndPulse 20s linear infinite;
       }
+
+      @keyframes rotateAndPulse {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
       .mainTitle {
-        background: linear-gradient(rgb(87, 159, 191), #FFF);
+        background: linear-gradient(rgb(80, 151, 221), #FFF);
         -webkit-background-clip: text; /* Для поддержки веб-кит браузерами */
         color: transparent;
         display: inline-block;
@@ -59,6 +70,16 @@ $font-size: 35px;
         font-weight: $font-weight;
         font-size: $font-size;
         margin: 0;
+        text-shadow: 2px 2px 4px transparent; /* Исходная тень с прозрачным цветом */
+        animation: blink 2s infinite alternate;
+      }
+      @keyframes blink {
+        0% {
+          text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7); /* Начальное состояние (блик) */
+        }
+        100% {
+          text-shadow: 2px 2px 4px transparent; /* Конечное состояние (без блика) */
+        }
       }
     }
   }
